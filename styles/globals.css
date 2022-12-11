@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+}
+
+@layer base {
+  body {
+    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl font-[Raleway]
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl
+  }
+  
+  li {
+    @apply cursor-pointer
+  }
+
+  button {
+    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white
+  }
+}
+
+
+
+
+.container{
+  max-width: 1140px;
+  margin: auto;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* accordion styles */
+
+h1 {
+  font-size: 42px;
+  color: var(--text-primary);
+  margin: 0px;
+  margin-bottom: 30px;
+}
+
+.accordion-simple > .active {
+  display: block;
+}
+
+.accordion__faq .inactive{
+  display: none;
+}
+
+.accordion__faq > div{
+  background-color: var(--white);
+  margin-bottom: 20px;
+  padding: 0px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.accordion__title{
+  color: var(--text-secondary);
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+
+.accordion__faq-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion__faq-heading .active{
+  color: var(--text-primary);
+}
+
+.accordion__faq-heading h3{
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.accordion__faq p {
+  margin: 0px;
+  padding-bottom: 30px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+
+
+
+
+
+
