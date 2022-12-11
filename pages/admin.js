@@ -23,7 +23,7 @@ export default function Admin() {
         alert("Invaled Credentials")
       }
       else{
-        Router.push(Contact)
+        Router.push('/dashboard')
       }
     }
   
