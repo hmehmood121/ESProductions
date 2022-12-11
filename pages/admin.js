@@ -2,14 +2,14 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../components/firebase'
-import Router from 'next/router';
+import { useRouter } from 'next/router';
 
 
 export default function Admin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('')
 
-
+  const router = useRouter()
 
   const logInWithEmailAndPassword = async (e) => {
     e.preventDefault()
@@ -23,7 +23,7 @@ export default function Admin() {
         alert("Invaled Credentials")
       }
       else{
-        Router.push('/dashboard')
+        router.push('/dashboard')
       }
     }
   
