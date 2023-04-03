@@ -8,14 +8,22 @@ import {
 } from "firebase/firestore";
 import { db } from "../components/firebase";
 import { AiFillDelete } from "react-icons/ai";
+import { storage } from "../components/firebase";
+import { ref, uploadBytes } from "firebase/storage";
+import { v4 } from 'uuid'
+
+
 
 const Dashboard = () => {
   const [accordion, setActiveAccordion] = useState(-1);
   const [link, setLink] = useState([]);
   const [lin, setLin] = useState('')
+  const [portfolio, setPortfolio] = useState('')
   const [orders, setOrders] = useState([]);
+  const [imageUpload, setImageUpload] = useState(null)
   const collectionRef = collection(db, "contacts");
   const linkCollection = collection(db, "link");
+  const linkPortfolio = collection(db, "portfolio");
 
   useEffect(() => {
     const viewOrders = async () => {
@@ -58,6 +66,20 @@ const Dashboard = () => {
     setLin("");
   };
 
+  const portSubmit = async (e) => {
+    e.preventDefault();
+    await addDoc(linkPortfolio, {
+      portfolio: portfolio,
+    })
+      .then(() => {
+        alert("Link has been submitted.");
+      })
+      .catch((err) => {
+        alert(err);
+      });
+      setPortfolio("");
+  };
+
   const toggleAccordion = (index) => {
     if (index === accordion) {
       return setActiveAccordion(-1);
@@ -65,14 +87,24 @@ const Dashboard = () => {
     setActiveAccordion(index);
   };
 
+  const uploadImage = () => {
+    if (imageUpload === null) return ;
+    const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
+    uploadBytes(imageRef, imageUpload).then(()=>{
+      alert("Image has been uploaded")
+    })
+  };
+
+
+
   return (
     <>
     <div className="container">
         <div>
           
-          <h1>Placed Orders</h1>
+          <h1 className="p-2">Placed Orders</h1>
         </div>
-        <div className="accordion__faq">
+        <div className="accordion__faq p-2">
           { orders.map((item, index) =>
               <div key={index} onClick={() => toggleAccordion(index)}>
                 <div className="accordion__faq-heading">
@@ -105,6 +137,16 @@ const Dashboard = () => {
         </div>
           ))}
           
+      </div>
+      <div className="mt-20 p-2">
+        <h3 className="mb-5">Place your Images</h3>
+        <input type="file" onChange={(e)=>{setImageUpload(e.target.files[0])}} />
+        <input className="p-2 bg-teal-900 text-white font-bold cursor-pointer active:text-gray-800" type='submit' onClick={uploadImage} />
+      </div>
+      <div className="mt-20 p-2">
+        <h3 className="mb-5">Place your Videos here</h3>
+        <input type="text" className="p-1" value={portfolio} onChange={e=>setPortfolio(e.target.value)} />
+        <input className="p-2 bg-teal-900 text-white font-bold cursor-pointer active:text-gray-800 ml-4" type='submit' onClick={portSubmit} />
       </div>
     </>
   );

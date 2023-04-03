@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Image from 'next/image';
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../components/firebase'
 import { useRouter } from 'next/router';
