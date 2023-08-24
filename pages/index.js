@@ -39,9 +39,6 @@ export default function Home() {
 
 
 
-
-
-
   return (
     <div>
       <Head>
@@ -52,12 +49,14 @@ export default function Home() {
     <FloatingWhatsApp className='cursor-pointer' phoneNumber='+17587129678' accountName='ESProductionz'  />
     <Main />
     <Reel />
-    {you?.map((item, index)=>(
-      <section key={index} className="text-gray-600 body-font">
+    {/* {you?.map((item, index)=>( */}
+      {/* <section key={index} className="text-gray-600 body-font"> */}
+      <section className="text-gray-600 body-font">
           <div className="mt-5 justify-center items-center">
           <div className="max-w-600">
             {hasWindow && <ReactPlayer
-              url={item.lin}
+              // url={item.lin}
+              url={'https://www.youtube.com/watch?v=y787XWMRndI'}
               width="100%"
               loop={true}
               playing={true}
@@ -66,9 +65,9 @@ export default function Home() {
           </div>
           </div>
   </section>
-  ))
+  {/* )) */}
 
-}
+{/* } */}
     <Services />
     <Projects />
     <Dapp />
