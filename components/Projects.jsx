@@ -112,6 +112,102 @@ const Projects = () => {
             controls={true}
           />}
         </div>
+        <div className="md:w-full">
+          <h3 className="mb-2 text-center">Island Champs</h3>
+          {hasWindow && <ReactPlayer
+            width="100%"
+            url="https://youtu.be/yb0c_6Ax5As?si=q_GJ-FMOpY6W7h49"
+            controls={true}
+          />}
+        </div>
+        <div className="md:w-full">
+          <h3 className="mb-2 text-center">Universal Health Care</h3>
+          {hasWindow && <ReactPlayer
+            width="100%"
+            url="https://youtu.be/6-lmsotMQqc?si=4o9wgnlNisM8tOeN"
+            controls={true}
+          />}
+        </div>
+        <div className="md:w-full">
+          <h3 className="mb-2 text-center">SLTA Romance</h3>
+          {hasWindow && <ReactPlayer
+            width="100%"
+            url="https://youtu.be/xFP8d9T7rJ0?si=FLuc7TEiNN5eaXuO"
+            controls={true}
+          />}
+        </div>
+        <div className="md:w-full">
+          <h3 className="mb-2 text-center">SLASC Toy Drive 2023</h3>
+          {hasWindow && <ReactPlayer
+            width="100%"
+            url="https://youtu.be/pOdqWN1HhfQ?si=LJtd5ngvlsS66_5W"
+            controls={true}
+          />}
+        </div>
+        <div className="md:w-full">
+          <h3 className="mb-2 text-center">Mass Domnic 2019 Montage</h3>
+          {hasWindow && <ReactPlayer
+            width="100%"
+            url="https://youtu.be/ZbHRLdtOeQc?si=yEDYriUucqDIxOcS"
+            controls={true}
+          />}
+        </div>
+        <div className="md:w-full">
+          <h3 className="mb-2 text-center">WTA Message</h3>
+          {hasWindow && <ReactPlayer
+            width="100%"
+            url="https://youtu.be/1d5RSUZy1tk?si=FoDlRVgyWdy6zW3d"
+            controls={true}
+          />}
+        </div>
+        <div className="md:w-full">
+          <h3 className="mb-2 text-center">Catch Your Cash Week 4</h3>
+          {hasWindow && <ReactPlayer
+            width="100%"
+            url="https://youtu.be/Y-pH0oiEs1Y?si=oSbi5PtCA0eGLJOO"
+            controls={true}
+          />}
+        </div>
+        <div className="md:w-full">
+          <h3 className="mb-2 text-center">SNL Super Summer Splatter Promotion TVC</h3>
+          {hasWindow && <ReactPlayer
+            width="100%"
+            url="https://youtu.be/j-owbNrTxkk?si=wrJaw7B1o1wjra75"
+            controls={true}
+          />}
+        </div>
+        <div className="md:w-full">
+          <h3 className="mb-2 text-center">JJS Generic 2018</h3>
+          {hasWindow && <ReactPlayer
+            width="100%"
+            url="https://youtu.be/Uk0Hn9OvDb0?si=QKar6MMJF4Htp-kL"
+            controls={true}
+          />}
+        </div>
+        <div className="md:w-full">
+          <h3 className="mb-2 text-center">L'Escape 2019</h3>
+          {hasWindow && <ReactPlayer
+            width="100%"
+            url="https://youtu.be/qXgY01IucI0?si=4KW-sgeBbcTBhmaL"
+            controls={true}
+          />}
+        </div>
+        <div className="md:w-full">
+          <h3 className="mb-2 text-center">Draft Fast 10K HD</h3>
+          {hasWindow && <ReactPlayer
+            width="100%"
+            url="https://youtu.be/Cpj07kB7wik?si=qjcj27iAKQkzMYuV"
+            controls={true}
+          />}
+        </div>
+        <div className="md:w-full">
+          <h3 className="mb-2 text-center">Casino Night TVC 2020 HD</h3>
+          {hasWindow && <ReactPlayer
+            width="100%"
+            url="https://youtu.be/ecJDN9wGR7U?si=4ZvGhh16LvuesDee"
+            controls={true}
+          />}
+        </div>
       </div>
     </div>
   );
