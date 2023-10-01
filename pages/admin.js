@@ -9,23 +9,22 @@ export default function Admin() {
   const [password, setPassword] = useState('')
 
   const router = useRouter()
-
   const logInWithEmailAndPassword = async (e) => {
     e.preventDefault()
-
-      const user = await signInWithEmailAndPassword(
+    
+    const user = await signInWithEmailAndPassword(
       auth,
       email,
       password
       )
-      if(!user){
-        alert("Invaled Credentials")
+      if (user) {
+        router.push('/dasshboard');
+      } else {
+        router.push('/admin');
       }
-      else{
-        router.push('/dashboard')
-      }
+      
     }
-  
+
   return (
     <div>
         <section className="h-screen">

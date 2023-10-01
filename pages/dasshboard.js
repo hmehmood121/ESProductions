@@ -10,7 +10,7 @@ import { db } from "../components/firebase";
 import { AiFillDelete } from "react-icons/ai";
 import { storage } from "../components/firebase";
 import { ref, uploadBytes } from "firebase/storage";
-import { v4 } from 'uuid'
+import { v4 } from 'uuid';
 
 
 
@@ -24,6 +24,8 @@ const Dashboard = () => {
   const collectionRef = collection(db, "contacts");
   const linkCollection = collection(db, "link");
   const linkPortfolio = collection(db, "portfolio");
+
+
 
   useEffect(() => {
     const viewOrders = async () => {
@@ -99,6 +101,7 @@ const Dashboard = () => {
 
   return (
     <>
+    
     <div className="container">
         <div>
           
@@ -148,6 +151,7 @@ const Dashboard = () => {
         <input type="text" className="p-1" value={portfolio} onChange={e=>setPortfolio(e.target.value)} />
         <input className="p-2 bg-teal-900 text-white font-bold cursor-pointer active:text-gray-800 ml-4" type='submit' onClick={portSubmit} />
       </div>
+    
     </>
   );
 };
